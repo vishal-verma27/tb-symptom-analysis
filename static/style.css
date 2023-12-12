@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#chat-container {
+    width: 95%; /* Use percentage for responsiveness */
+    max-width: 700px; /* Set a maximum width for larger screens */
+    height: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* background: url('better-health.png') no-repeat center fixed; */
+    background: linear-gradient(rgba(230, 231, 232, 1), rgba(254, 80, 0, 0.3)), url("/static/images/better-health.png") no-repeat center;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-header {
+    padding: 10px;
+    text-align: center;
+    background-color: #FE5000;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chat-messages {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.user-avatar,
+.bot-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-avatar {
+    background-color: #004E42;
+}
+
+.bot-avatar {
+    background-color: #FE5000;
+}
+
+.user-message,
+.bot-message {
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.user-message {
+    background-color: #004E42;
+}
+
+.bot-message {
+    background-color: #FE5000;
+}
+
+#input-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #404041;
+    border-radius: 5px;
+}
+
+#send-button,
+#restart-button {
+    background-color: #FE5000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#disclaimer-box {
+    margin-top: 5%;
+    padding: 10px;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #555;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#disclaimer {
+    animation: moveCredits 30s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes moveCredits {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-20%);
+    }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 700px) {
+    #chat-container {
+        width: 95%;
+        max-width: none;
+    }
+}
+
+.file-input {
+    background-color: #FE5000;
+    color: #004E42;;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}

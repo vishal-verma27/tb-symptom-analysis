@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/healthcare.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Chatbot UI</title>
+</head>
+<body>
+
+<div id="chat-container">
+    <div id="chat-header">
+        <centre><b>TB Symptom Analysis | V-CareHealth</b></centre>
+    </div>
+    <div id="chat-messages">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <div id="input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="if (event.key === 'Enter') sendMessage()">
+        <button id="send-button" onclick="sendMessage()">Send</button>
+        <button id="restart-button" onclick="restartChat()">Restart</button>
+    </div>
+</div>
+<div id="disclaimer-box">
+    <div id="disclaimer">
+        Prior to initiating any medication, it is advisable to seek guidance from your healthcare advisor or consult with a qualified medical professional.
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
