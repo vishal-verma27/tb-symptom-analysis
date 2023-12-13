@@ -6,7 +6,7 @@ import pandas as pd
 from fuzzywuzzy import process
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 # Define a mapping for severity scores
 severity_mapping = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5,
