@@ -1,5 +1,4 @@
 import cv2
-cv2.startWindowThread()
 import numpy as np
 from keras.models import load_model
 
